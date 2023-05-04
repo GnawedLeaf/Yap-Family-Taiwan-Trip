@@ -57,6 +57,7 @@ animation: 1s fadeIn 0.3s forwards;
 
 @media only screen and (max-width: 750px){
   font-size:2rem;
+  width:80%;
 }
 `
 
@@ -78,6 +79,9 @@ height:fit-content;
 &:hover{
   transform: translateY(-5%);
 }
+@media only screen and (max-width:750px){
+  font-size:4rem;
+}
 
 `
 
@@ -85,16 +89,19 @@ export const DaySubtitle = styled.div`
 margin-top:1vw;
 letter-spacing:0.4rem;
 font-size: 1.2vw;
+
+@media only screen and (max-width:750px){
+  font-size:1.2rem;
+}
 `
 export const MiddleLine = styled.div`
 width:0px;
 height:0vw;
-border:0.05rem solid #333333;
 margin-top:2vw;
 margin-bottom:2vw;
 transition-duration: 0.3s;
 
-border:0.1rem solid #333333;
+border:0.05vw solid #333333;
 opacity:1;
 height:${(props) => props.height};
 
@@ -115,7 +122,10 @@ height:${(props) => props.height};
     height:${(props) => props.height};
   }
 }
-
+@media only screen and (max-width:750px){
+  margin-top:1.5rem;
+  margin-bottom:1.5rem;
+}
 
 `
 export const HorizontalLine = styled.div`
@@ -141,6 +151,11 @@ font-size: 3vw;
     font-size: 3vw;
   }
 }
+@media only screen and (max-width:750px){
+  font-size:2rem;
+}
+
+
 `
 export const NamesSubtitle = styled.div`
 opacity:0;
@@ -157,6 +172,11 @@ letter-spacing:0.1rem;
     font-size: 1vw;
     letter-spacing:0.1rem;
   }
+}
+
+@media only screen and (max-width:750px){
+  font-size:0.8rem;
+  margin-top:0.5rem;
 }
 
   `

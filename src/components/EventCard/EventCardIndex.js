@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SubEventContainer, SubEventPicture, SubEventTitle, SubEventDescription, SubEventLocation, EventContainer, EventCard, EventPicture, EventTitle, EventAndSubeventContainer, TransitionContainer, TransitionImage } from "./EventCardStyles";
+import { SubEventContainer, SubEventPicture2, SubEventTitle, SubEventDescription, SubEventLocation, EventContainer, EventCard, EventPicture2, EventTitle, EventAndSubeventContainer, TransitionContainer, TransitionImage } from "./EventCardStyles";
 
 
 const EventCardComponent = (props) => {
@@ -24,11 +24,11 @@ const EventCardComponent = (props) => {
   }
 
   const [foodCardClicked, setFoodCardClicked] = useState(false);
-  const [fullPicture, setFullPicutre] = useState(eventData[0].subEventPic);
+  const [fullPicture, setFullPicutre] = useState();
 
   const handlePictureClick = (index) => {
     setFoodCardClicked(true);
-    setFullPicutre(eventData[0].subEventPic)
+    setFullPicutre(eventData[index].subEventPic)
   }
 
   return (
@@ -36,14 +36,14 @@ const EventCardComponent = (props) => {
       {props.children}
       <EventAndSubeventContainer spread={spreadStack}>
         <EventCard zIndex={eventData.length + 2} onMouseEnter={handleMouseEnterEventCard} onMouseLeave={handleMouseLeaveEventCard} onClick={handleEventCardClick} spread={spreadStack}>
-          <EventPicture src={mainPicture} />
+          <EventPicture2 src={mainPicture} />
           <EventTitle>
             {mainTitle}
           </EventTitle>
         </EventCard>
         {eventData.map((subEvent, index) => (
           <SubEventContainer spread={spreadStack} display={showStack || spreadStack} zIndex={eventData.length - index + 1} index={index + 1}>
-            <SubEventPicture onClick={() => {
+            <SubEventPicture2 onClick={() => {
               handlePictureClick(index)
             }} src={subEvent.subEventPic} />
             <SubEventTitle>{subEvent.subEventTitle}</SubEventTitle>

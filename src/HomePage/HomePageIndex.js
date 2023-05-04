@@ -2,8 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 import { BigContainer, HeroContainer, HeroTitle, Day1Container, DayTitle, MiddleLine, HorizontalLine, DaySubtitle, TimeTitle, NamesSubtitle } from "./HomePageStyles";
 import HeroPicture from "../assets/HeroPicture.jpg"
 import Navbar from "../components/Navbar/NavbarIndex";
-import { DongMenBreakfast } from "./EventsData";
+import { DongMenBreakfast, DaanThings } from "./Eventsdata/EventsData";
 import EventCardComponent from "../components/EventCard/EventCardIndex";
+import dongmenmarket from "./Eventsdata/assets/DongmenBreakfast/dongmenmarket.jpg"
 
 const Home = () => {
 
@@ -91,19 +92,32 @@ const Home = () => {
           </NamesSubtitle>
 
           <EventCardComponent
-            mainTitle={"Breakfast At 東門"}
-            mainPicture={HeroPicture}
+            mainTitle={"Breakfast At Dong Men Market"}
+            mainPicture={dongmenmarket}
             subEvents={DongMenBreakfast}
           >
           </EventCardComponent>
 
           <EventCardComponent
-            mainTitle={"Breakfast At 東門"}
+            mainTitle={"Chill Around Daan"}
             mainPicture={HeroPicture}
-            subEvents={DongMenBreakfast}
+            subEvents={DaanThings}
           >
           </EventCardComponent>
 
+          <MiddleLine height={mobileWindow ? "5rem" : "20vh"} fadeDown={elementIntersected} />
+          <TimeTitle fadeDown={elementIntersected}>
+            Afternoon
+          </TimeTitle>
+          <NamesSubtitle fadeDown={elementIntersected}>
+            Everyone
+          </NamesSubtitle>
+          <EventCardComponent
+            mainTitle={"Chill Around 大安"}
+            mainPicture={HeroPicture}
+            subEvents={DaanThings}
+          >
+          </EventCardComponent>
 
 
         </Day1Container>

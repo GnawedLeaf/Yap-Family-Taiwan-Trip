@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const BigContainer = styled.div`
 overflow-x:hidden;
-height:300vh;
 font-family: 'Lora', serif;
 color:#333333;
 `
@@ -22,6 +21,13 @@ background-position-y: 30%;
 background-attachment: fixed;
 color:transparent;
 
+
+animation: 1s halfSize 1.4s forwards;
+@keyframes halfSize {
+  to{
+    height:50vh;
+  }
+}
 @media only screen and (max-width: 750px){
   height:100vh;
 }
@@ -34,37 +40,63 @@ z-index:2;
 font-family: 'Lora', serif;
 letter-spacing: 0.4rem;
 text-align: center;
+opacity: 0;
+
+animation: 1s fadeIn 0.3s forwards;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform:scale(0);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
 
 @media only screen and (max-width: 750px){
   font-size:2rem;
 }
 `
 
+
+
 export const Day1Container = styled.div`
 margin:5rem 1rem 5rem 1rem;
 display:flex;
-
 flex-direction: column;
 align-items: center;
 
 `
 export const DayTitle = styled.div`
-font-size: 5rem;
+font-size: 6vw;
 font-weight:500;
 transition-duration: 0.3s;
 height:fit-content;
+
 &:hover{
   transform: translateY(-5%);
 }
 
 `
+
+export const DaySubtitle = styled.div`
+margin-top:1vw;
+letter-spacing:0.4rem;
+font-size: 1.2vw;
+`
 export const MiddleLine = styled.div`
 width:0px;
 height:0vw;
-border:0.1rem solid #333333;
-margin-top:3vw;
-margin-bottom:3vw;
+border:0.05rem solid #333333;
+margin-top:2vw;
+margin-bottom:2vw;
 transition-duration: 0.3s;
+
+border:0.1rem solid #333333;
+opacity:1;
+height:${(props) => props.height};
 
  ${(props) => props.fadeDown ? "animation: 1s fadeDown 0s forwards;" : ""}
 @keyframes fadeDown {
@@ -80,7 +112,7 @@ transition-duration: 0.3s;
   100%{
     border:0.1rem solid #333333;
     opacity:1;
-    height:15vw;
+    height:${(props) => props.height};
   }
 }
 
@@ -94,3 +126,38 @@ border:0.1rem solid #333333;
 margin-top:13vw;
 `
 export const VerticalLine = styled.div``
+
+export const TimeTitle = styled.div`
+opacity:0;
+${(props) => props.fadeDown ? "animation: 0.5s fadeIn2 1.1s forwards;" : ""}
+
+opacity:1;
+font-size: 3vw;
+
+
+@keyframes fadeIn2 {
+  100%{
+    opacity:1;
+    font-size: 3vw;
+  }
+}
+`
+export const NamesSubtitle = styled.div`
+opacity:0;
+${(props) => props.fadeDown ? "animation: 0.5s fadeIn3 1.2s forwards;" : ""}
+
+
+opacity:1;
+font-size: 1vw;
+letter-spacing:0.1rem;
+
+@keyframes fadeIn3 {
+  100%{
+    opacity:1;
+    font-size: 1vw;
+    letter-spacing:0.1rem;
+  }
+}
+
+  `
+

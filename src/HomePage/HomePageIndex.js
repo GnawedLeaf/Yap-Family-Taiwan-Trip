@@ -1,9 +1,37 @@
 import React, { useEffect, useState, useRef } from "react";
-import { BigContainer, HeroContainer, HeroTitle, Day1Container, DayTitle, MiddleLine, HorizontalLine } from "./HomePageStyles";
+import { BigContainer, HeroContainer, HeroTitle, Day1Container, DayTitle, MiddleLine, HorizontalLine, DaySubtitle, TimeTitle, NamesSubtitle } from "./HomePageStyles";
 import HeroPicture from "../assets/HeroPicture.jpg"
 import Navbar from "../components/Navbar/NavbarIndex";
+import { DongMenBreakfast } from "./EventsData";
+import EventCardComponent from "../components/EventCard/EventCardIndex";
 
 const Home = () => {
+
+  //Desktop or Mobile Checker
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [mobileWindow, setMobileWindow] = useState(false);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+    //Return is meant to remove the handler after its done
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth >= 750) {
+      setMobileWindow(false)
+    }
+    else {
+      setMobileWindow(true)
+    }
+
+  }, [windowWidth])
+
+
   //Intersection Observer
   const elementRef = useRef(null);
   const [elementIntersected, setElementIntersected] = useState(false)
@@ -19,7 +47,7 @@ const Home = () => {
         }
       },
       {
-        rootMargin: '-250px',
+        rootMargin: '-40%',
         threshold: 0.1,
       }
     );
@@ -33,6 +61,9 @@ const Home = () => {
     };
 
   }, [elementIntersected]);
+
+
+
   return (
     <>
       <Navbar display={false} />
@@ -48,15 +79,35 @@ const Home = () => {
           <DayTitle >
             Day 1
           </DayTitle>
-          <MiddleLine fadeDown={elementIntersected} />
-          <DayTitle >
-            Day 2
-          </DayTitle>
-          <MiddleLine fadeDown={elementIntersected} />
-          <DayTitle >
-            Day 3
-          </DayTitle>
+          <DaySubtitle>
+            Taipei
+          </DaySubtitle>
+          <MiddleLine height={mobileWindow ? "5rem" : "20vh"} fadeDown={elementIntersected} />
+          <TimeTitle fadeDown={elementIntersected}>
+            Morning
+          </TimeTitle>
+          <NamesSubtitle fadeDown={elementIntersected}>
+            Nat and Ryan
+          </NamesSubtitle>
+
+          <EventCardComponent
+            mainTitle={"Breakfast At 東門"}
+            mainPicture={HeroPicture}
+            subEvents={DongMenBreakfast}
+          >
+          </EventCardComponent>
+
+          <EventCardComponent
+            mainTitle={"Breakfast At 東門"}
+            mainPicture={HeroPicture}
+            subEvents={DongMenBreakfast}
+          >
+          </EventCardComponent>
+
+
+
         </Day1Container>
+
       </BigContainer>
     </>
   )

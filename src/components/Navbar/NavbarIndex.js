@@ -1,16 +1,13 @@
 import React from "react";
-import { NavbarContainer, NavbarItem } from "./NavbarStyles";
+import { NavbarContainer } from "./NavbarStyles";
+import { BsArrowUpCircle } from 'react-icons/bs';
 
 const Navbar = (props) => {
   return (
     <NavbarContainer display={props.display}>
-      <NavbarItem>
-        Home
-      </NavbarItem>
-      <NavbarItem>
-        Album
-      </NavbarItem>
-
+      <BsArrowUpCircle onClick={() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }} style={{ zIndex: "999", color: "#333333", fontSize: '2rem', cursor: "pointer" }} />
     </NavbarContainer>
   )
 }

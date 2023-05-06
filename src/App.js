@@ -8,10 +8,8 @@ import Home from './HomePage/HomePageIndex';
 function App() {
   return (
     <>
-
       <Home />
     </>
-
   );
 }
 

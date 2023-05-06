@@ -165,13 +165,22 @@ font-weight:400;
 text-align:center;
 width:90%;
 
+
+
+@media only screen and (min-width:750px){
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:8vh;
+    }
+
 @media only screen and (max-width:750px){
 font-size:1rem;
 margin-top:1rem;
   }
 `
 export const SubEventDescription = styled.div`
-margin-top:2.5vh;
+margin-top:0.5vh;
 font-size:0.9vw;
 width:90%;
 text-align:center;

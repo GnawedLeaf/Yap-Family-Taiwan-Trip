@@ -8,6 +8,67 @@ import jianguoflowermarket from "./assets/Chillarounddaan/jianguoflowermarket.jp
 import danapark from "./assets/Chillarounddaan/daanpark.jpg"
 import yongkangstreet from "./assets/Chillarounddaan/yongkangstreet.jpg"
 
+import beefnoodles1 from "./assets/Day1Afternoon/beefnoodles.jpg"
+import ckshall from "./assets/Day1Afternoon/ckshall.jpg"
+
+
+export const Template = [
+  {
+    subEventPic: dongmenmarket,
+    subEventTitle: "",
+    subEventDescription: "",
+    subEventLocation: "",
+    subEventLocationhref: "",
+  },
+]
+
+export const Day1Evening = [
+  {
+    subEventPic: dongmenmarket,
+    subEventTitle: "Ning Xia Night Market",
+    subEventDescription: "A night market near my office and it has really nice food, its not as popular so its less of a tourist trap and there's 鍋貼,蔥油餅,甜不辣,愛米,粉圓加鮮奶 and 刈包 just to name a few ",
+    subEventLocation: "寧夏夜市",
+    subEventLocationhref: "https://goo.gl/maps/ZqNMWNtxke3KE9k19?coh=178573&entry=tt",
+  },
+]
+
+
+
+export const Day1Afternoon = [
+  {
+    subEventPic: beefnoodles1,
+    subEventTitle: "Beef Noodles",
+    subEventDescription: "One of the best beef noodles I've had in Taiwan and near the hotel so we'll come here for lunch. the noodles are thick and chewy and the soup is tasty and the price is normal",
+    subEventLocation: "玖伍牛肉麵忠孝店",
+    subEventLocationhref: "https://goo.gl/maps/oyS8pMebHAL42Hi87?coh=178573&entry=tt",
+  },
+  {
+    subEventPic: ckshall,
+    subEventTitle: "Chiang Kai-Shek Memorial Hall",
+    subEventDescription: "Very large open space with nice historial buildings, great to take pictures with and visit all the different buildings and there is a small musemum at the white building to see",
+    subEventLocation: "國立中正紀念堂",
+    subEventLocationhref: "https://goo.gl/maps/PMBxnAxRE8XMn5Dr5?coh=178573&entry=tt",
+  },
+  {
+    subEventPic: dongmenmarket,
+    subEventTitle: "Taipei 101",
+    subEventDescription: "Tallest building in taiwan, can see it from across taipei and its not really a good spot to take pictures from the bottom but nice to see the scale of it",
+    subEventLocation: "台北101",
+    subEventLocationhref: "https://goo.gl/maps/mQJeuzrT77EPJqHd8?coh=178573&entry=tt",
+  },
+  {
+    subEventPic: dongmenmarket,
+    subEventTitle: "National Dr. Sun Yat-Sen Memorial Hall",
+    subEventDescription: "Change of guard every hour from 2pm to 5pm hopefully we can see it when we reach, not sure what is inside but should be fun to see",
+    subEventLocation: "國父紀念館",
+    subEventLocationhref: "https://goo.gl/maps/cQP1EBK9jWs6rtsG6?coh=178573&entry=tt",
+  },
+
+
+]
+
+
+
 export const DongMenBreakfast = [
   {
     subEventPic: dongmenmarket,
@@ -65,25 +126,7 @@ export const DaanThings = [
   },
 ]
 
-export const Day1Afternoon = [
-  {
-    subEventPic: dongmenmarket,
-    subEventTitle: "",
-    subEventDescription: "",
-    subEventLocation: "",
-    subEventLocationhref: "",
-  },
-]
 
-export const Template = [
-  {
-    subEventPic: dongmenmarket,
-    subEventTitle: "",
-    subEventDescription: "",
-    subEventLocation: "",
-    subEventLocationhref: "",
-  },
-]
 
 
 

@@ -178,6 +178,15 @@ letter-spacing:0.1rem;
   font-size:0.8rem;
   margin-top:0.5rem;
 }
+`
+export const BacktoTopTitle = styled(NamesSubtitle)`
+transition-duration:0.3s;
+&:hover{
 
-  `
+  cursor:pointer;
+  text-decoration:underline;
+}
+`
+
+
 

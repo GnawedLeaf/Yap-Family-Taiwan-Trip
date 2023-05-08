@@ -4,13 +4,19 @@ import bestchickenintaiwan from "../Eventsdata/assets/DongmenBreakfast/bestchick
 import dongmenmarket from "../Eventsdata/assets/DongmenBreakfast/dongmenmarket.jpg"
 import intestinesshop from "../Eventsdata/assets/DongmenBreakfast/dongmenintestineshop.jpg"
 
+
 import jianguoflowermarket from "./assets/Chillarounddaan/jianguoflowermarket.jpg"
 import danapark from "./assets/Chillarounddaan/daanpark.jpg"
 import yongkangstreet from "./assets/Chillarounddaan/yongkangstreet.jpg"
 
 import beefnoodles1 from "./assets/Day1Afternoon/beefnoodles.jpg"
 import ckshall from "./assets/Day1Afternoon/ckshall.jpg"
+import NationalDrSunYatSenMemorialHall from "./assets/Day1Afternoon/NationalDrSunYat-SenMemorialHall.jpg"
+import taipei101 from "./assets/Day1Afternoon/taipei101.jpg"
 
+import ningxia from "./assets/Day1Night/ningxia.jpg"
+import ximen from "./assets/Day1Night/ximen.jpg"
+import pier from "./assets/Day1Night/pier.jpg"
 
 export const Template = [
   {
@@ -24,11 +30,25 @@ export const Template = [
 
 export const Day1Evening = [
   {
-    subEventPic: dongmenmarket,
+    subEventPic: ningxia,
     subEventTitle: "Ning Xia Night Market",
     subEventDescription: "A night market near my office and it has really nice food, its not as popular so its less of a tourist trap and there's 鍋貼,蔥油餅,甜不辣,愛米,粉圓加鮮奶 and 刈包 just to name a few ",
     subEventLocation: "寧夏夜市",
     subEventLocationhref: "https://goo.gl/maps/ZqNMWNtxke3KE9k19?coh=178573&entry=tt",
+  },
+  {
+    subEventPic: ximen,
+    subEventTitle: "Xi Men Ding",
+    subEventDescription: "A famous place for its nice food like fried chicken and oyster mee sua and bubble tea and its very happening, there are always performances going on but don't buy any gifts from here the prices are v high",
+    subEventLocation: "西門町",
+    subEventLocationhref: "https://goo.gl/maps/cqReuE93nFcqc58i8?coh=178573&entry=tt",
+  },
+  {
+    subEventPic: pier,
+    subEventTitle: "Chill at the pier",
+    subEventDescription: "Good vibes and you have a drink or food facing the river, it will be windy and the atmosphere is very nice alot of people will be there too",
+    subEventLocation: "大稻埕碼頭貨櫃市集",
+    subEventLocationhref: "https://goo.gl/maps/WtzZmfAgW7Zv43gQA?coh=178573&entry=tt",
   },
 ]
 
@@ -50,14 +70,14 @@ export const Day1Afternoon = [
     subEventLocationhref: "https://goo.gl/maps/PMBxnAxRE8XMn5Dr5?coh=178573&entry=tt",
   },
   {
-    subEventPic: dongmenmarket,
+    subEventPic: taipei101,
     subEventTitle: "Taipei 101",
     subEventDescription: "Tallest building in taiwan, can see it from across taipei and its not really a good spot to take pictures from the bottom but nice to see the scale of it",
     subEventLocation: "台北101",
     subEventLocationhref: "https://goo.gl/maps/mQJeuzrT77EPJqHd8?coh=178573&entry=tt",
   },
   {
-    subEventPic: dongmenmarket,
+    subEventPic: NationalDrSunYatSenMemorialHall,
     subEventTitle: "National Dr. Sun Yat-Sen Memorial Hall",
     subEventDescription: "Change of guard every hour from 2pm to 5pm hopefully we can see it when we reach, not sure what is inside but should be fun to see",
     subEventLocation: "國父紀念館",

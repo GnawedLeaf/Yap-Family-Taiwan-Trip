@@ -72,7 +72,7 @@ transition-duration:0.3s;
 background-blend-mode: multiply;
   margin-top:1rem;
   max-height:20rem;
-  height:18rem;
+  height:8rem;
   width:10rem;
   position:absolute;
   }
@@ -90,11 +90,10 @@ height:25vh;
 width:85%;
 
 @media only screen and (max-width:750px){
-margin-top:1rem;
-color:#f5f5f5;
-font-size:1.3rem;
+margin-top:9rem;
+color:#33333;
+font-size:1.15rem;
 width:70%;
-color:#f5f5f5;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -212,6 +211,7 @@ transition-duration:0.3s;
 @media only screen and (max-width:750px){
   font-size:0.8rem;
   margin-top:1rem;
+  text-decoration:underline;
 }
 
 `
